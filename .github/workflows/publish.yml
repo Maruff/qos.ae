@@ -37,6 +37,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      # Ubuntu's fdroidserver (2.2) ships an androguard too old to read APKs
+      # from current Android build tools, so take it from PyPI instead.
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Build the F-Droid repository
         env:
           GH_TOKEN: ${{ github.token }}
@@ -55,12 +62,13 @@ jobs:
             exit 0
           fi
 
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fdroidserver
+          python -m pip install -q fdroidserver==2.4.5
 
           cd fdroid
           mkdir -p repo/icons
+          # fdroidserver versions differ on where repo_icon is looked up; provide both.
           cp ../assets/qos-icon-512.png repo/icons/qos.png
+          cp ../assets/qos-icon-512.png qos.png
           for tag in $tags; do
             gh release download "$tag" --repo Maruff/qos --pattern '*.apk' --dir repo --skip-existing
           done
