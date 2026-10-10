@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="t">
+  <title id="t">Illustration: the XFCE desktop in qos Desktop on a tablet, with a file manager and a terminal window</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03241c"/><stop offset=".55" stop-color="#05110e"/><stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { white-space: pre; }
+    .s { font: 12px system-ui, "Segoe UI", Roboto, sans-serif; fill: #c9d6d3; }
+    .m { font: 12.5px ui-monospace, "Cascadia Code", Menlo, Consolas, monospace; fill: #c9d6d3; }
+    .p { fill: #10f3be; } .d { fill: #6f8a84; }
+  </style>
+  <rect x="4" y="4" width="952" height="632" rx="34" fill="#16201d" stroke="#2a3a36" stroke-width="2"/>
+  <rect x="24" y="24" width="912" height="592" rx="14" fill="url(#wall)"/>
+  <!-- XFCE top panel -->
+  <rect x="24" y="24" width="912" height="28" rx="14" fill="#0a0f0e"/>
+  <rect x="24" y="38" width="912" height="14" fill="#0a0f0e"/>
+  <text x="44" y="43" class="s" style="font-weight:600">Applications</text>
+  <text x="140" y="43" class="s d">Terminal</text>
+  <text x="212" y="43" class="s d">Files</text>
+  <text x="916" y="43" class="s" text-anchor="end">Sat 10:30</text>
+  <!-- desktop icons -->
+  <g class="s" text-anchor="middle">
+    <rect x="60" y="80" width="40" height="32" rx="4" fill="#10f3be" opacity=".85"/><text x="80" y="130">Home</text>
+    <rect x="60" y="152" width="40" height="32" rx="4" fill="#10f3be" opacity=".55"/><text x="80" y="202">Projects</text>
+  </g>
+  <!-- file manager -->
+  <g transform="translate(150 86)">
+    <rect width="420" height="300" rx="8" fill="#101614" stroke="#24322e"/>
+    <rect width="420" height="30" rx="8" fill="#141c1a"/><rect y="22" width="420" height="8" fill="#141c1a"/>
+    <text x="16" y="20" class="s">Projects — File Manager</text>
+    <circle cx="398" cy="15" r="6" fill="#3a4a46"/><circle cx="378" cy="15" r="6" fill="#3a4a46"/>
+    <rect y="30" width="110" height="270" fill="#0d1311"/>
+    <g class="s d"><text x="14" y="58">Home</text><text x="14" y="82">Projects</text><text x="14" y="106">Downloads</text><text x="14" y="130">Pictures</text></g>
+    <g class="s" text-anchor="middle">
+      <rect x="140" y="56" width="52" height="42" rx="5" fill="#10f3be" opacity=".7"/><text x="166" y="116">game</text>
+      <rect x="226" y="56" width="52" height="42" rx="5" fill="#10f3be" opacity=".7"/><text x="252" y="116">site</text>
+      <rect x="312" y="56" width="52" height="42" rx="5" fill="#10f3be" opacity=".7"/><text x="338" y="116">film</text>
+      <rect x="140" y="146" width="52" height="42" rx="5" fill="#8fb8ff" opacity=".55"/><text x="166" y="206">poster.kra</text>
+      <rect x="226" y="146" width="52" height="42" rx="5" fill="#f5c451" opacity=".55"/><text x="252" y="206">intro.mp4</text>
+      <rect x="312" y="146" width="52" height="42" rx="5" fill="#c792ea" opacity=".55"/><text x="338" y="206">main.qmz</text>
+    </g>
+  </g>
+  <!-- terminal window -->
+  <g transform="translate(470 300)">
+    <rect width="420" height="270" rx="8" fill="#050807" stroke="#24322e"/>
+    <rect width="420" height="30" rx="8" fill="#141c1a"/><rect y="22" width="420" height="8" fill="#141c1a"/>
+    <text x="16" y="20" class="s">Terminal</text>
+    <circle cx="398" cy="15" r="6" fill="#3a4a46"/><circle cx="378" cy="15" r="6" fill="#3a4a46"/>
+    <g class="m" transform="translate(16 60)">
+      <text><tspan class="p">~ $</tspan> pkg install krita inkscape</text>
+      <text y="22" class="d">Setting up krita (6.0.4.1) ...</text>
+      <text y="44" class="d">Setting up inkscape (1.4.4) ...</text>
+      <text y="72"><tspan class="p">~ $</tspan> krita &amp;</text>
+      <text y="100"><tspan class="p">~ $</tspan> echo $DISPLAY</text>
+      <text y="122">:1</text>
+      <text y="150"><tspan class="p">~ $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+    </g>
+  </g>
+  <!-- bottom dock -->
+  <rect x="380" y="588" width="200" height="22" rx="11" fill="#0a0f0e" opacity=".9"/>
+  <g fill="#10f3be"><circle cx="420" cy="599" r="6"/><circle cx="460" cy="599" r="6" opacity=".7"/><circle cx="500" cy="599" r="6" opacity=".5"/><circle cx="540" cy="599" r="6" opacity=".35"/></g>
+</svg>

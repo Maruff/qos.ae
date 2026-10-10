@@ -67,8 +67,8 @@ jobs:
           cd fdroid
           mkdir -p repo/icons
           # fdroidserver versions differ on where repo_icon is looked up; provide both.
-          cp ../assets/qos-icon-512.png repo/icons/qos.png
-          cp ../assets/qos-icon-512.png qos.png
+          cp ../site/assets/qos-icon-512.png repo/icons/qos.png
+          cp ../site/assets/qos-icon-512.png qos.png
           for tag in $tags; do
             gh release download "$tag" --repo Maruff/qos --pattern '*.apk' --dir repo --skip-existing
           done
@@ -83,15 +83,17 @@ jobs:
           fdroid update --verbose
           rm -f keystore.p12
 
+      - name: Build the pages
+        run: python tools/build.py
+
       - name: Assemble the site
         run: |
           set -euo pipefail
-          mkdir -p _site/fdroid
-          cp index.html _site/
-          cp -r ta _site/
-          cp -r assets _site/
+          mkdir -p _site
+          cp -r site/. _site/
           touch _site/.nojekyll
           if [ -d fdroid/repo ] && [ -f fdroid/repo/index-v1.jar ]; then
+            mkdir -p _site/fdroid
             cp -r fdroid/repo _site/fdroid/repo
           fi
           du -sh _site

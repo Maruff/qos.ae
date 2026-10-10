@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ta" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ஆவணங்கள் · qos</title>
+<meta name="description" content="qos-ஐப் பயன்படுத்துவது எப்படி: முதல் முறை, முனையம், VS Code, qos Desktop, இ-தமிழ், பணி நிற்காமல் இருக்க, சிக்கல் தீர்வு.">
+<link rel="icon" href="../../assets/qos-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/qos-icon-192.png">
+<link rel="alternate" hreflang="en" href="https://qos.ae/docs/">
+<link rel="alternate" hreflang="ta" href="https://qos.ae/ta/docs/">
+<meta property="og:title" content="ஆவணங்கள் · qos">
+<meta property="og:description" content="qos-ஐப் பயன்படுத்துவது எப்படி: முதல் முறை, முனையம், VS Code, qos Desktop, இ-தமிழ், பணி நிற்காமல் இருக்க, சிக்கல் தீர்வு.">
+<meta property="og:image" content="https://qos.ae/assets/qos-logo.png">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div class="banner"><div class="wrap"><a href="../../ta/roadmap/#releases"><strong>qos 0.2</strong> வெளியானது: qos Desktop உங்கள் கைபேசிக்கு லினக்ஸ் மேசைத்தளத்தைக் கொண்டுவருகிறது →</a></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../ta/"><img src="../../assets/qos-icon-192.png" alt="" width="32" height="32">qos</a>
+    <div class="menu">
+      <a href="../../ta/features/">வசதிகள்</a>
+      <a href="../../ta/download/">பதிவிறக்கம்</a>
+      <a href="../../ta/docs/" aria-current="page">ஆவணங்கள்</a>
+      <a href="../../ta/roadmap/">திட்டப் பாதை</a>
+      <a href="../../ta/community/">சமூகம்</a>
+      <a href="../../ta/about/">பற்றி</a>
+    </div>
+    <div class="nav-end">
+      <a class="lang" href="../../docs/" hreflang="en" lang="en">English</a>
+      <a class="btn primary small" href="../../ta/download/">qos பெறுக</a>
+      <button class="menu-toggle" type="button" aria-expanded="false">பட்டி</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<header class="page-hero"><div class="wrap"><p class="eyebrow">ஆவணங்கள்</p><h1>qos-ஐப் பயன்படுத்துதல்</h1><p>முதல் முறை திறப்பதிலிருந்து மேசைத்தளம் வரை; ஏதாவது தவறினால் என்ன செய்வது.</p></div></header>
+
+<section class="flush">
+  <div class="wrap docs">
+    <nav class="toc" aria-label="இந்தப் பக்கத்தில்">
+      <a href="#first-launch">முதல் முறை</a><a href="#terminal">முனையம்</a><a href="#storage">உங்கள் கோப்புகள்</a><a href="#vscode">VS Code</a><a href="#desktop">qos Desktop</a><a href="#etamil">இ-தமிழ்</a><a href="#background">பணி நிற்காமல் இருக்க</a><a href="#updates">புதுப்பிப்புகள்</a><a href="#troubleshooting">சிக்கல் தீர்வு</a><a href="#faq">கேள்விகள்</a>
+    </nav>
+    <div class="doc">
+      <section id="first-launch"><h2>முதல் முறை திறக்கும்போது</h2>
+        <p>qos முதல் முறை திறக்கும்போது தன் அடிப்படை அமைப்பை நிறுவி, பின் <code>qos-setup</code>-ஐ இயக்குகிறது; அது git, clang, make, Python, Rust, Java 17, code-server, இ-தமிழ் ஆகியவற்றை நிறுவுகிறது. சுமார் 500 MB பதிவிறக்கும்; எனவே Wi-Fi பயன்படுத்தித் திரையை அணையாமல் வைத்திருங்கள். முடிந்ததும் முனையத்தில் <strong>Done</strong> தெரியும்.</p>
+        <p>அமைப்பு இடையில் நின்றால், அடுத்த முறை தொடரும். எப்போது வேண்டுமானாலும் மீண்டும் இயக்கலாம்:</p><pre>qos-setup</pre></section>
+      <section id="terminal"><h2>முனையம்</h2>
+        <p>தொகுப்புத் திரட்டிலிருந்து எதையும் <code>pkg</code> கொண்டு நிறுவலாம்:</p><pre>pkg search postgres
+pkg install postgresql</pre>
+        <p>இடது ஓரத்திலிருந்து உள்ளே இழுத்தால் பக்கப் பட்டி: அமர்வுகள், விசைப்பலகை மாற்றி, VS Code, Desktop. கூடுதல் விசை வரிசையைக் காட்ட அல்லது மறைக்க விசைப்பலகைப் பொத்தானை நீண்ட நேரம் அழுத்துங்கள்.</p></section>
+      <section id="storage"><h2>உங்கள் கோப்புகள்</h2>
+        <p>உங்கள் திட்டங்கள் qos-இன் வீட்டுக் கோப்புறையில் இருக்கும். கைபேசியின் பகிர்ந்த சேமிப்பை (Downloads, Pictures, கேமரா காட்சிகள்) அணுக, ஒருமுறை இயக்குங்கள்:</p><pre>termux-setup-storage</pre><p>அது அனுமதி கேட்டு, அந்தக் கோப்புறைகளுக்கான இணைப்புகளுடன் <code>~/storage</code>-ஐ உருவாக்கும்.</p></section>
+      <section id="vscode"><h2>VS Code</h2>
+        <p>பக்கப் பட்டியில் <strong>VS Code</strong>-ஐத் தொடுங்கள். code-server இயங்கவில்லை என்றால் qos அதைப் பின்னணியில் தொடங்கி, <code>~/.config/code-server/config.yaml</code>-இல் உள்ள கடவுச்சொல்லைக் கொண்டு உங்களை உள்நுழைக்கும்.</p>
+        <p>கடவுச்சொல் வேண்டுமென்றே இயக்கத்தில் உள்ளது: கைபேசியில் உள்ள எந்தச் செயலியும் 127.0.0.1:8080-ஐ அணுக முடியும், code-server கட்டளைகளை இயக்க முடியும். நீங்களே தொடங்க: <code>code-server</code>.</p></section>
+      <section id="desktop"><h2>qos Desktop</h2>
+        <p>qos F-Droid களஞ்சியத்திலிருந்து qos Desktop-ஐ நிறுவி, பக்கப் பட்டியில் <strong>Desktop</strong>-ஐத் தொடுங்கள். முதல் முறை qos, XFCE-ஐயும் (சுமார் 100 MB) <code>qos-x11</code> தொகுப்பையும் நிறுவி, மேசைத்தளத்தைத் திறக்கும். முனையத்திலிருந்து: <code>qos-desktop</code>.</p>
+        <p>நிறுத்த: XFCE-இலிருந்து வெளியேறுங்கள், அல்லது qos Desktop அறிவிப்பில் Exit, அல்லது தொடங்கிய அமர்வில் Ctrl+C. முனையத்திலிருந்து தொடங்கும் வரைகலை நிரல்களுக்கு <code>DISPLAY=:1</code> தேவை.</p>
+        <p>திரை கருப்பாகவே இருந்தால் அல்லது நிறங்கள் மாறித் தெரிந்தால், ஒரு விருப்பத்துடன் கைமுறையாகத் தொடங்குங்கள்:</p><pre>termux-x11 :1 -legacy-drawing -xstartup "xfce4-session"
+termux-x11 :1 -force-bgra -xstartup "xfce4-session"</pre></section>
+      <section id="etamil"><h2>இ-தமிழ்</h2>
+        <p>இ-தமிழ் நிரலை மெய்நிகர் இயந்திரத்தில் இயக்கவும், இயக்காமலேயே சரிபார்க்கவும்:</p><pre>etamil --vm program.qmz
+etamil --check program.qmz</pre>
+        <p>நிலையான நூலகம் <code>$ETAMIL_PATH</code>-இல் உள்ளது; எனவே <code>இறக்கு "nUlakam/…"</code> எந்தக் கோப்புறையிலிருந்தும் இயங்கும். மொழியை <a href="https://etamil.in/ta/">etamil.in</a>-இல் கற்றுக்கொள்ளுங்கள்.</p></section>
+      <section id="background"><h2>பணி நிற்காமல் இருக்க</h2>
+        <p>ஆண்ட்ராய்டு 12 மற்றும் புதியவை பின்னணியில் நீண்ட நேரம் இயங்கும் கட்டுமானங்கள், VS Code, மேசைத்தளம் போன்றவற்றை நிறுத்தக்கூடும். ஆண்ட்ராய்டு 14 மற்றும் புதியவற்றில் Developer options-ஐ இயக்கி <strong>Disable child process restrictions</strong>-ஐச் செயல்படுத்துங்கள். qos-இன் மின்கலப் பயன்பாட்டை <strong>Unrestricted</strong> என அமைப்பதும் உதவும்.</p></section>
+      <section id="updates"><h2>புதுப்பிப்புகள்</h2>
+        <p>F-Droid களஞ்சியத்துடன், qos-உம் qos Desktop-உம் மற்ற செயலிகளைப் போலவே புதுப்பிக்கப்படும். qos-க்குள் உள்ள தொகுப்புகளைப் புதுப்பிக்க:</p><pre>pkg upgrade</pre></section>
+      <section id="troubleshooting"><h2>சிக்கல் தீர்வு</h2>
+        <details><summary>அமைப்பு பிழையுடன் நின்றது</summary><p>இணைய இணைப்பைச் சரிபார்த்து <code>qos-setup</code>-ஐ மீண்டும் இயக்குங்கள். ஒவ்வொரு படியையும் மீண்டும் இயக்கலாம்.</p></details>
+        <details><summary>"qos Desktop is not installed"</summary><p>qos F-Droid களஞ்சியத்திலிருந்தோ qos-desktop GitHub வெளியீட்டிலிருந்தோ qos Desktop-ஐ நிறுவி, மீண்டும் Desktop-ஐத் தொடுங்கள்.</p></details>
+        <details><summary>"Signature verification … failed"</summary><p>qos Desktop-உம் qos-x11 தொகுப்பும் வெவ்வேறு மூலங்களிலிருந்து வந்துள்ளன. இரண்டையும் Termux-இலிருந்து அல்ல, qos வெளியீடுகளிலிருந்தே நிறுவுங்கள்.</p></details>
+        <details><summary>VS Code திறக்கவில்லை</summary><p>பிழையைப் பார்க்க முனையத்தில் <code>code-server</code> இயக்குங்கள். அது நிறுவப்படவில்லை என்றால் <code>qos-setup</code> இயக்குங்கள்.</p></details>
+      </section>
+      <section id="faq"><h2>கேள்விகள்</h2>
+        <details><summary>qos இலவசமா?</summary><p>ஆம். qos, GNU GPL v3 உரிமத்தின் கீழ் உள்ள கட்டற்ற மென்பொருள்; விளம்பரங்களோ, செயலிக்குள் வாங்குதல்களோ, கணக்கோ இல்லை.</p></details>
+        <details><summary>qos-க்கு ரூட் தேவையா?</summary><p>இல்லை. எல்லாமே செயலியின் சொந்தச் சேமிப்பிடத்துக்குள், சாதாரண செயலி அனுமதிகளுடன் இயங்குகின்றன.</p></details>
+        <details><summary>qos, Termux-இலிருந்து எப்படி வேறுபடுகிறது?</summary><p>qos, Termux-ஐ அடிப்படையாகக் கொண்டு அதன் தொகுப்புத் திரட்டைத் தக்க வைத்துக்கொள்கிறது. அதனுடன் முழுக் கருவித்தொகுப்பின் ஒருமுறை அமைப்பு, செயலிக்குள்ளேயே VS Code, qos Desktop, இ-தமிழ் ஆகியவற்றைச் சேர்க்கிறது — எந்த அமைப்பும் இல்லாமலேயே புதிய கைபேசி நிரலாக்கக் கணினியாகிறது.</p></details>
+        <details><summary>Termux-ஐயும் வைத்திருக்கலாமா?</summary><p>முடியாது. எல்லா Termux தொகுப்புகளும் இயங்குவதற்காக qos, Termux-இன் தொகுப்புப் பெயரையே பயன்படுத்துகிறது; அந்தப் பெயரில் ஒரு செயலியை மட்டுமே ஆண்ட்ராய்டு அனுமதிக்கும்.</p></details>
+        <details><summary>qos ஏன் Google Play-இல் இல்லை?</summary><p>செயலிகள் சமீபத்திய ஆண்ட்ராய்டு பதிப்புகளை இலக்காகக் கொள்ள வேண்டும் என்று Play கோருகிறது; அவை பதிவிறக்கிய நிரல்களை ஒரு செயலி இயக்க அனுமதிப்பதில்லை. நிரலாக்கக் கணினி செய்ய வேண்டியதே அதுதான்.</p></details>
+      </section>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+  <div class="foot">
+    <div class="about"><img src="../../assets/qos-icon-192.png" alt="" width="40" height="40"><p>qos ஆண்ட்ராய்டு கைபேசியையோ டேப்லெட்டையோ நிரலாக்கக் கணினியாக மாற்றுகிறது. GNU GPL v3 உரிமத்தின் கீழ் கட்டற்ற மென்பொருள்.</p></div>
+    <div><h4>qos பெறுக</h4><ul><li><a href="../../ta/download/">பதிவிறக்கம்</a></li><li><a href="../../ta/download/#verify">F-Droid களஞ்சியம்</a></li><li><a href="https://github.com/Maruff/qos/releases">GitHub வெளியீடுகள்</a></li><li><a href="../../ta/download/#requirements">தேவைகள்</a></li></ul></div>
+    <div><h4>கற்க</h4><ul><li><a href="../../ta/features/">வசதிகள்</a></li><li><a href="../../ta/docs/">ஆவணங்கள்</a></li><li><a href="../../ta/roadmap/">திட்டப் பாதை</a></li><li><a href="../../ta/docs/#faq">கேள்விகள்</a></li></ul></div>
+    <div><h4>சமூகம்</h4><ul><li><a href="https://github.com/Maruff/qos/discussions">மன்றம்</a></li><li><a href="https://github.com/Maruff/qos/issues">சிக்கலைத் தெரிவிக்க</a></li><li><a href="../../ta/community/">பங்களிக்க</a></li><li><a href="https://etamil.in/ta/">இ-தமிழ்</a></li></ul></div>
+    <div><h4>திட்டம்</h4><ul><li><a href="../../ta/about/">பற்றி</a></li><li><a href="https://github.com/Maruff/qos">qos மூல நிரல்</a></li><li><a href="https://github.com/Maruff/qos-desktop">qos Desktop மூல நிரல்</a></li><li><a href="../../ta/about/#brand">அடையாளம்</a></li></ul></div>
+  </div>
+  <div class="legal"><span>qos — தமிழ் OS · Termux-ஐ அடிப்படையாகக் கொண்டது</span><a href="../../docs/" lang="en">English</a></div>
+  </div>
+</footer>
+
+<script src="../../assets/site.js"></script>
+</body>
+</html>

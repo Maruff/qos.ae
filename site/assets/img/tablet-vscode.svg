@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="t">
+  <title id="t">Illustration: VS Code running inside qos on a tablet, editing a Python web app with a terminal below</title>
+  <style>
+    text { white-space: pre; }
+    .m { font: 13px ui-monospace, "Cascadia Code", Menlo, Consolas, monospace; fill: #c9d6d3; }
+    .s { font: 12px system-ui, "Segoe UI", Roboto, sans-serif; fill: #9cb1ac; }
+    .kw { fill: #c792ea; } .fn { fill: #82aaff; } .st { fill: #c3e88d; } .cm { fill: #5f7a74; } .nu { fill: #f78c6c; } .p { fill: #10f3be; }
+  </style>
+  <rect x="4" y="4" width="952" height="632" rx="34" fill="#16201d" stroke="#2a3a36" stroke-width="2"/>
+  <rect x="24" y="24" width="912" height="592" rx="14" fill="#0d1110"/>
+  <!-- title bar -->
+  <rect x="24" y="24" width="912" height="34" rx="14" fill="#111816"/>
+  <rect x="24" y="44" width="912" height="14" fill="#111816"/>
+  <text x="480" y="46" class="s" text-anchor="middle">server.py — app — VS Code</text>
+  <!-- activity bar -->
+  <rect x="24" y="58" width="44" height="558" fill="#0a0e0d"/>
+  <rect x="36" y="74" width="20" height="20" rx="3" fill="none" stroke="#10f3be" stroke-width="2"/>
+  <circle cx="46" cy="124" r="9" fill="none" stroke="#5f7a74" stroke-width="2"/>
+  <path d="M38 160h16M38 168h16M38 176h10" stroke="#5f7a74" stroke-width="2"/>
+  <!-- explorer -->
+  <rect x="68" y="58" width="190" height="558" fill="#0f1513"/>
+  <text x="84" y="82" class="s" style="font-weight:600;fill:#e9f1ef">EXPLORER</text>
+  <g class="s">
+    <text x="84" y="110">▾ app</text>
+    <text x="100" y="134" fill="#10f3be">server.py</text>
+    <text x="100" y="156">templates/</text>
+    <text x="100" y="178">static/</text>
+    <text x="100" y="200">requirements.txt</text>
+    <text x="100" y="222">README.md</text>
+    <text x="84" y="252">▸ notes</text>
+  </g>
+  <!-- tabs -->
+  <rect x="258" y="58" width="678" height="34" fill="#0b0f0e"/>
+  <rect x="258" y="58" width="130" height="34" fill="#0d1110"/>
+  <rect x="258" y="89" width="130" height="3" fill="#10f3be"/>
+  <text x="276" y="80" class="s" style="fill:#e9f1ef">server.py</text>
+  <text x="404" y="80" class="s">README.md</text>
+  <!-- code -->
+  <g class="m" transform="translate(274 120)">
+    <text y="0"><tspan class="cm">  1</tspan>  <tspan class="kw">from</tspan> http.server <tspan class="kw">import</tspan> HTTPServer, SimpleHTTPRequestHandler</text>
+    <text y="22"><tspan class="cm">  2</tspan></text>
+    <text y="44"><tspan class="cm">  3</tspan>  PORT = <tspan class="nu">8000</tspan></text>
+    <text y="66"><tspan class="cm">  4</tspan></text>
+    <text y="88"><tspan class="cm">  5</tspan>  <tspan class="kw">def</tspan> <tspan class="fn">main</tspan>():</text>
+    <text y="110"><tspan class="cm">  6</tspan>      <tspan class="cm"># Serve the site from this folder</tspan></text>
+    <text y="132"><tspan class="cm">  7</tspan>      server = HTTPServer((<tspan class="st">"0.0.0.0"</tspan>, PORT), SimpleHTTPRequestHandler)</text>
+    <text y="154"><tspan class="cm">  8</tspan>      <tspan class="fn">print</tspan>(<tspan class="st">f"Open http://localhost:{PORT}"</tspan>)</text>
+    <text y="176"><tspan class="cm">  9</tspan>      server.<tspan class="fn">serve_forever</tspan>()</text>
+    <text y="198"><tspan class="cm"> 10</tspan></text>
+    <text y="220"><tspan class="cm"> 11</tspan>  <tspan class="kw">if</tspan> __name__ == <tspan class="st">"__main__"</tspan>:</text>
+    <text y="242"><tspan class="cm"> 12</tspan>      <tspan class="fn">main</tspan>()</text>
+  </g>
+  <!-- terminal panel -->
+  <rect x="258" y="430" width="678" height="186" fill="#090c0b"/>
+  <rect x="258" y="430" width="678" height="1" fill="#1d2825"/>
+  <text x="274" y="452" class="s" style="font-weight:600;fill:#e9f1ef">TERMINAL</text>
+  <g class="m" transform="translate(274 482)">
+    <text y="0"><tspan class="p">~/app $</tspan> python server.py</text>
+    <text y="22" fill="#8be9a8">Open http://localhost:8000</text>
+    <text y="44" fill="#8fb8ff">127.0.0.1 - "GET / HTTP/1.1" 200 -</text>
+    <text y="66"><tspan class="p">~/app $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+  </g>
+  <!-- status bar -->
+  <rect x="24" y="594" width="912" height="22" fill="#10f3be"/>
+  <rect x="24" y="594" width="912" height="8" fill="#10f3be"/>
+  <text x="40" y="610" class="s" style="fill:#00241b;font-weight:600">qos · main</text>
+  <text x="920" y="610" class="s" style="fill:#00241b" text-anchor="end">Python 3.14  ·  UTF-8</text>
+</svg>

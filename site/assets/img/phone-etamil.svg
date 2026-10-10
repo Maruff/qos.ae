@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 720" role="img" aria-labelledby="t">
+  <title id="t">Illustration: an eTamil program written in Tamil and its output, in qos on a phone</title>
+  <style>
+    text { white-space: pre; }
+    .m { font: 13px ui-monospace, "Cascadia Code", Menlo, Consolas, "Noto Sans Tamil", "Nirmala UI", monospace; fill: #d6e2df; }
+    .t { font: 13px "Noto Sans Tamil", "Nirmala UI", "Latha", "Tamil Sangam MN", sans-serif; fill: #d6e2df; }
+    .s { font: 11px system-ui, "Segoe UI", Roboto, sans-serif; fill: #6f8a84; }
+    .kw { fill: #c792ea; } .fn { fill: #82aaff; } .st { fill: #c3e88d; } .nu { fill: #f78c6c; } .p { fill: #10f3be; } .cm { fill: #5f7a74; }
+  </style>
+  <rect x="6" y="6" width="348" height="708" rx="46" fill="#16201d" stroke="#2a3a36" stroke-width="2"/>
+  <rect x="18" y="18" width="324" height="684" rx="36" fill="#000"/>
+  <rect x="150" y="30" width="60" height="16" rx="8" fill="#16201d"/>
+
+  <rect x="18" y="62" width="324" height="30" fill="#0f1513"/>
+  <text x="34" y="82" class="s" style="fill:#e9f1ef">ceyalkaL.qmz</text>
+  <text x="326" y="82" class="s" text-anchor="end">eTamil</text>
+
+  <g transform="translate(28 122)">
+    <text class="t"><tspan class="kw">செயல்</tspan> <tspan class="fn">காரணீயம்</tspan>(எண்_மதிப்பு) {</text>
+    <text class="t" y="30">  (எண்_மதிப்பு &lt;= <tspan class="nu">1</tspan>) <tspan class="kw">எனில்</tspan> {</text>
+    <text class="t" y="60">    <tspan class="kw">திரும்பு</tspan> <tspan class="nu">1</tspan>;</text>
+    <text class="t" y="90">  }</text>
+    <text class="t" y="120">  <tspan class="kw">திரும்பு</tspan> எண்_மதிப்பு</text>
+    <text class="t" y="150">    * <tspan class="fn">காரணீயம்</tspan>(எண்_மதிப்பு - <tspan class="nu">1</tspan>);</text>
+    <text class="t" y="180">}</text>
+    <text class="t" y="222"><tspan class="kw">அச்சு</tspan> <tspan class="st">"காரணீயம்(6) = "</tspan></text>
+    <text class="t" y="252">     &amp; <tspan class="fn">காரணீயம்</tspan>(<tspan class="nu">6</tspan>);</text>
+  </g>
+
+  <rect x="18" y="400" width="324" height="1" fill="#1d2825"/>
+  <g transform="translate(30 436)">
+    <text class="m"><tspan class="p">~ $</tspan> etamil --vm ceyalkaL.qmz</text>
+    <text class="t" y="30" fill="#8be9a8">காரணீயம்(6) = 720</text>
+    <text class="m" y="66"><tspan class="p">~ $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+  </g>
+  <rect x="130" y="690" width="100" height="5" rx="2.5" fill="#2a3a36"/>
+</svg>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs · qos</title>
+<meta name="description" content="How to use qos: first launch, the terminal, VS Code, qos Desktop, eTamil, keeping work running and troubleshooting.">
+<link rel="icon" href="../assets/qos-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/qos-icon-192.png">
+<link rel="alternate" hreflang="en" href="https://qos.ae/docs/">
+<link rel="alternate" hreflang="ta" href="https://qos.ae/ta/docs/">
+<meta property="og:title" content="Docs · qos">
+<meta property="og:description" content="How to use qos: first launch, the terminal, VS Code, qos Desktop, eTamil, keeping work running and troubleshooting.">
+<meta property="og:image" content="https://qos.ae/assets/qos-logo.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<div class="banner"><div class="wrap"><a href="../roadmap/#releases"><strong>qos 0.2</strong> is out: qos Desktop brings a Linux desktop to your phone →</a></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/qos-icon-192.png" alt="" width="32" height="32">qos</a>
+    <div class="menu">
+      <a href="../features/">Features</a>
+      <a href="../download/">Download</a>
+      <a href="../docs/" aria-current="page">Docs</a>
+      <a href="../roadmap/">Roadmap</a>
+      <a href="../community/">Community</a>
+      <a href="../about/">About</a>
+    </div>
+    <div class="nav-end">
+      <a class="lang" href="../ta/docs/" hreflang="ta" lang="ta">தமிழ்</a>
+      <a class="btn primary small" href="../download/">Get qos</a>
+      <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<header class="page-hero"><div class="wrap"><p class="eyebrow">Docs</p><h1>Using qos</h1><p>From first launch to the desktop, and what to do when something goes wrong.</p></div></header>
+
+<section class="flush">
+  <div class="wrap docs">
+    <nav class="toc" aria-label="On this page">
+      <a href="#first-launch">First launch</a><a href="#terminal">The terminal</a><a href="#storage">Your files</a><a href="#vscode">VS Code</a><a href="#desktop">qos Desktop</a><a href="#etamil">eTamil</a><a href="#background">Keeping work running</a><a href="#updates">Updates</a><a href="#troubleshooting">Troubleshooting</a><a href="#faq">Questions</a>
+    </nav>
+    <div class="doc">
+      <section id="first-launch"><h2>First launch</h2>
+        <p>The first time qos opens, it installs its base system and then runs <code>qos-setup</code>, which installs git, clang, make, Python, Rust, Java 17, code-server and eTamil. It downloads about 500 MB, so use Wi-Fi and keep the screen on. You will see <strong>Done</strong> in the terminal when it finishes.</p>
+        <p>If setup is interrupted, it carries on at the next start. You can also run it again at any time:</p><pre>qos-setup</pre></section>
+      <section id="terminal"><h2>The terminal</h2>
+        <p>Install anything from the package collection with <code>pkg</code>:</p><pre>pkg search postgres
+pkg install postgresql</pre>
+        <p>Swipe in from the left edge for the drawer: sessions, the keyboard toggle, VS Code and Desktop. Long-press the keyboard button to show or hide the extra keys row.</p></section>
+      <section id="storage"><h2>Your files</h2>
+        <p>Your projects live in qos's home folder. To reach the phone's shared storage (Downloads, Pictures, camera footage), run once:</p><pre>termux-setup-storage</pre><p>It asks for permission and creates <code>~/storage</code> with links to those folders.</p></section>
+      <section id="vscode"><h2>VS Code</h2>
+        <p>Tap <strong>VS Code</strong> in the drawer. qos starts code-server in the background if it is not already running, and signs you in with the password from <code>~/.config/code-server/config.yaml</code>.</p>
+        <p>The password stays on deliberately: every app on the phone can reach 127.0.0.1:8080, and code-server can run commands. To start it yourself: <code>code-server</code>.</p></section>
+      <section id="desktop"><h2>qos Desktop</h2>
+        <p>Install qos Desktop from the qos F-Droid repository, then tap <strong>Desktop</strong> in the drawer. The first time, qos installs XFCE (about 100 MB) and the <code>qos-x11</code> package, then opens the desktop. From a terminal: <code>qos-desktop</code>.</p>
+        <p>Stop it by logging out of XFCE, with Exit in the qos Desktop notification, or with Ctrl+C in the session that started it. Graphical programs started from a terminal need <code>DISPLAY=:1</code>.</p>
+        <p>If the screen stays black or colours look swapped, start it by hand with an option:</p><pre>termux-x11 :1 -legacy-drawing -xstartup "xfce4-session"
+termux-x11 :1 -force-bgra -xstartup "xfce4-session"</pre></section>
+      <section id="etamil"><h2>eTamil</h2>
+        <p>Run an eTamil program with the virtual machine, and check one without running it:</p><pre>etamil --vm program.qmz
+etamil --check program.qmz</pre>
+        <p>The standard library is in <code>$ETAMIL_PATH</code>, so <code>இறக்கு "nUlakam/…"</code> works from any folder. Learn the language at <a href="https://etamil.in">etamil.in</a>.</p></section>
+      <section id="background"><h2>Keeping work running</h2>
+        <p>Android 12 and newer may stop long-running work in the background, such as builds, VS Code or the desktop. On Android 14 and later, turn on Developer options and enable <strong>Disable child process restrictions</strong>. Setting qos's battery use to <strong>Unrestricted</strong> also helps.</p></section>
+      <section id="updates"><h2>Updates</h2>
+        <p>With the F-Droid repository, qos and qos Desktop update like any other app. Packages inside qos update with:</p><pre>pkg upgrade</pre></section>
+      <section id="troubleshooting"><h2>Troubleshooting</h2>
+        <details><summary>Setup stopped with an error</summary><p>Check the internet connection and run <code>qos-setup</code> again. Each step is safe to repeat.</p></details>
+        <details><summary>"qos Desktop is not installed"</summary><p>Install qos Desktop from the qos F-Droid repository or the qos-desktop GitHub release, then tap Desktop again.</p></details>
+        <details><summary>"Signature verification … failed"</summary><p>qos Desktop and the qos-x11 package come from different sources. Install both from qos releases, not from Termux.</p></details>
+        <details><summary>VS Code does not open</summary><p>Run <code>code-server</code> in the terminal to see the error. If it is not installed, run <code>qos-setup</code>.</p></details>
+      </section>
+      <section id="faq"><h2>Questions</h2>
+        <details><summary>Is qos free?</summary><p>Yes. qos is free software under the GNU GPL v3, with no ads, no in-app purchases and no account.</p></details>
+        <details><summary>Does qos need root?</summary><p>No. Everything runs inside the app's own storage, with normal app permissions.</p></details>
+        <details><summary>How is qos different from Termux?</summary><p>qos is built on Termux and keeps its package collection. It adds a one-time setup of a complete toolset, VS Code inside the app, qos Desktop and eTamil, so a new phone becomes a development machine without configuration.</p></details>
+        <details><summary>Can I keep Termux installed?</summary><p>No. qos uses Termux's package name so that every Termux package works, and Android allows one app with that name.</p></details>
+        <details><summary>Why is qos not on Google Play?</summary><p>Play requires apps to target recent Android versions, which do not let an app run programs it downloads. A development machine has to do exactly that.</p></details>
+      </section>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+  <div class="foot">
+    <div class="about"><img src="../assets/qos-icon-192.png" alt="" width="40" height="40"><p>qos turns an Android phone or tablet into a development machine. Free software under the GNU GPL v3.</p></div>
+    <div><h4>Get qos</h4><ul><li><a href="../download/">Download</a></li><li><a href="../download/#verify">F-Droid repository</a></li><li><a href="https://github.com/Maruff/qos/releases">GitHub releases</a></li><li><a href="../download/#requirements">Requirements</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="../features/">Features</a></li><li><a href="../docs/">Docs</a></li><li><a href="../roadmap/">Roadmap</a></li><li><a href="../docs/#faq">Questions</a></li></ul></div>
+    <div><h4>Community</h4><ul><li><a href="https://github.com/Maruff/qos/discussions">Forum</a></li><li><a href="https://github.com/Maruff/qos/issues">Report a problem</a></li><li><a href="../community/">Contribute</a></li><li><a href="https://etamil.in">eTamil</a></li></ul></div>
+    <div><h4>Project</h4><ul><li><a href="../about/">About</a></li><li><a href="https://github.com/Maruff/qos">qos source</a></li><li><a href="https://github.com/Maruff/qos-desktop">qos Desktop source</a></li><li><a href="../about/#brand">Brand</a></li></ul></div>
+  </div>
+  <div class="legal"><span>qos — தமிழ் OS · built on Termux</span><a href="../ta/docs/" lang="ta">தமிழ்</a></div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>

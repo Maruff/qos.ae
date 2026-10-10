@@ -4,9 +4,15 @@ The website for [qos](https://github.com/Maruff/qos), and its F-Droid repository
 
 | Path | What |
 | --- | --- |
-| `index.html`, `ta/`, `assets/` | the site at qos.ae, in English and Tamil (`/ta/`) |
-| `fdroid/config.yml`, `fdroid/metadata/` | the F-Droid repository, built from the signed APKs on the qos GitHub releases |
-| `.github/workflows/publish.yml` | builds both and deploys them to GitHub Pages |
+| `tools/build.py` | builds every page, in English (`/`) and Tamil (`/ta/`), into `site/` |
+| `tools/content_en.py`, `tools/content_ta.py` | the words on each page; edit these, then run `python tools/build.py` |
+| `site/assets/` | styles, script, logo and illustrations |
+| `fdroid/config.yml`, `fdroid/metadata/` | the F-Droid repository, built from the signed APKs on the qos and qos Desktop releases |
+| `.github/workflows/publish.yml` | builds the pages and the F-Droid repository and deploys both to GitHub Pages |
+
+Pages: Home, Features, Download, Docs, Roadmap, Community and About. The
+illustrations in `site/assets/img/` are drawings, labelled as such on the site,
+until real screenshots replace them.
 
 The F-Droid repository is served at `/fdroid/repo`. Its signing key's SHA-256
 fingerprint, which people check when they add the repository, is:

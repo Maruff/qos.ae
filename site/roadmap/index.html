@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap · qos</title>
+<meta name="description" content="What is in qos today, what comes next, and release notes.">
+<link rel="icon" href="../assets/qos-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/qos-icon-192.png">
+<link rel="alternate" hreflang="en" href="https://qos.ae/roadmap/">
+<link rel="alternate" hreflang="ta" href="https://qos.ae/ta/roadmap/">
+<meta property="og:title" content="Roadmap · qos">
+<meta property="og:description" content="What is in qos today, what comes next, and release notes.">
+<meta property="og:image" content="https://qos.ae/assets/qos-logo.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<div class="banner"><div class="wrap"><a href="../roadmap/#releases"><strong>qos 0.2</strong> is out: qos Desktop brings a Linux desktop to your phone →</a></div></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/qos-icon-192.png" alt="" width="32" height="32">qos</a>
+    <div class="menu">
+      <a href="../features/">Features</a>
+      <a href="../download/">Download</a>
+      <a href="../docs/">Docs</a>
+      <a href="../roadmap/" aria-current="page">Roadmap</a>
+      <a href="../community/">Community</a>
+      <a href="../about/">About</a>
+    </div>
+    <div class="nav-end">
+      <a class="lang" href="../ta/roadmap/" hreflang="ta" lang="ta">தமிழ்</a>
+      <a class="btn primary small" href="../download/">Get qos</a>
+      <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<header class="page-hero"><div class="wrap"><p class="eyebrow">Roadmap</p><h1>Where qos is, and where it is going</h1><p>qos ships small releases every month. Anything not yet released can change, and what you say in the forum shapes the order.</p></div></header>
+
+<section class="flush">
+  <div class="wrap">
+<div class="roadmap">
+  <div class="stage"><span class="tag">Available now · v0.2</span><h3>A working development machine</h3><ul>
+    <li>Linux terminal with the full Termux package collection</li>
+    <li>One-time setup of git, clang, make, Python, Rust and Java 17</li>
+    <li>VS Code inside the app, signed in automatically</li>
+    <li>qos Desktop: an XFCE desktop for graphical apps <span class="new">New</span></li>
+    <li>eTamil compiler and its library, nUlakam (64-bit ARM)</li>
+    <li>Signed releases on GitHub and the qos F-Droid repository</li></ul></div>
+  <div class="stage"><span class="tag amber">Next</span><h3>Smoother everyday use</h3><ul>
+    <li>eTamil built natively for Android, so eTamil programs can reach websites and APIs by name</li>
+    <li>Choose which tools to install at first launch</li>
+    <li>The app's own screens in Tamil</li>
+    <li>VS Code settings: start on launch, choose the port</li></ul></div>
+  <div class="stage"><span class="tag violet">Planned</span><h3>Kits for every kind of work</h3><ul>
+    <li><strong>Setup by purpose:</strong> choose what you are here to do at first launch, and qos installs the matching kit</li>
+    <li>Kits for Android apps, games, animation, film, IoT, security and local AI</li>
+    <li>qos add-ons for the device: notifications, sensors, camera, widgets and start-on-boot scripts</li>
+    <li>A full Debian environment for tools Termux does not package</li></ul></div>
+  <div class="stage"><span class="tag grey">Exploring</span><h3>Ideas we are looking into</h3><ul>
+    <li>qos Desktop built into qos itself: one app instead of two</li>
+    <li>Flashing boards over USB without root, and eTamil on Arduino from the phone</li>
+    <li>Ready-made lessons for classrooms</li>
+    <li>Documentation in Tamil and English</li></ul></div>
+</div></div>
+</section>
+
+<section class="alt" id="purpose">
+  <div class="wrap">
+    <p class="eyebrow">Planned</p><h2>Setup by purpose</h2>
+    <p class="intro">When qos is mature, its first launch will ask what you are here to do, and install the kit for that work instead of everything.</p>
+    <div class="tiles four">
+      <span class="tile">Business apps<small>eTamil, Python, Node.js, PostgreSQL</small></span>
+      <span class="tile">Mobile apps<small>Kotlin, Gradle, Android tools</small></span>
+      <span class="tile">Games<small>Godot, LÖVE, pygame</small></span>
+      <span class="tile">Cybersecurity<small>nmap, radare2, jadx</small></span>
+      <span class="tile">AI<small>llama.cpp, PyTorch</small></span>
+      <span class="tile">Film-making<small>ffmpeg, Kdenlive</small></span>
+      <span class="tile">IoT<small>MQTT, ESP32</small></span>
+      <span class="tile">Learning<small>Python, eTamil, lessons</small></span>
+    </div>
+  </div>
+</section>
+
+<section id="releases">
+  <div class="wrap">
+    <p class="eyebrow">Release notes</p><h2>What changed</h2>
+    <div class="grid two">
+      <div class="card"><span class="tag">11 October 2026</span><h3>qos 0.2 and qos Desktop 0.1</h3><ul>
+        <li>A Desktop button in the drawer opens an XFCE desktop on qos Desktop, setting it up the first time.</li>
+        <li>qos Desktop: the Termux:X11 display, signed with the qos key so it runs as part of qos.</li>
+        <li>Both are in the qos F-Droid repository.</li></ul>
+        <p style="margin-top:10px"><a href="https://github.com/Maruff/qos/releases/tag/v0.2.0">qos 0.2.0</a> · <a href="https://github.com/Maruff/qos-desktop/releases/tag/v0.1.0">qos Desktop 0.1.0</a></p></div>
+      <div class="card"><span class="tag grey">10 October 2026</span><h3>qos 0.1</h3><ul>
+        <li>The first release: Termux with a one-time setup of git, clang, Python, Rust, Java 17, code-server and eTamil.</li>
+        <li>VS Code inside the app, with automatic sign-in.</li>
+        <li>Signed APKs for four processor types, and the qos F-Droid repository.</li></ul>
+        <p style="margin-top:10px"><a href="https://github.com/Maruff/qos/releases/tag/v0.1.0">qos 0.1.0</a></p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+  <div class="foot">
+    <div class="about"><img src="../assets/qos-icon-192.png" alt="" width="40" height="40"><p>qos turns an Android phone or tablet into a development machine. Free software under the GNU GPL v3.</p></div>
+    <div><h4>Get qos</h4><ul><li><a href="../download/">Download</a></li><li><a href="../download/#verify">F-Droid repository</a></li><li><a href="https://github.com/Maruff/qos/releases">GitHub releases</a></li><li><a href="../download/#requirements">Requirements</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="../features/">Features</a></li><li><a href="../docs/">Docs</a></li><li><a href="../roadmap/">Roadmap</a></li><li><a href="../docs/#faq">Questions</a></li></ul></div>
+    <div><h4>Community</h4><ul><li><a href="https://github.com/Maruff/qos/discussions">Forum</a></li><li><a href="https://github.com/Maruff/qos/issues">Report a problem</a></li><li><a href="../community/">Contribute</a></li><li><a href="https://etamil.in">eTamil</a></li></ul></div>
+    <div><h4>Project</h4><ul><li><a href="../about/">About</a></li><li><a href="https://github.com/Maruff/qos">qos source</a></li><li><a href="https://github.com/Maruff/qos-desktop">qos Desktop source</a></li><li><a href="../about/#brand">Brand</a></li></ul></div>
+  </div>
+  <div class="legal"><span>qos — தமிழ் OS · built on Termux</span><a href="../ta/roadmap/" lang="ta">தமிழ்</a></div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
