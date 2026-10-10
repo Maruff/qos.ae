@@ -4,7 +4,7 @@ The website for [qos](https://github.com/Maruff/qos), and its F-Droid repository
 
 | Path | What |
 | --- | --- |
-| `index.html`, `assets/` | the site at qos.ae |
+| `index.html`, `ta/`, `assets/` | the site at qos.ae, in English and Tamil (`/ta/`) |
 | `fdroid/config.yml`, `fdroid/metadata/` | the F-Droid repository, built from the signed APKs on the qos GitHub releases |
 | `.github/workflows/publish.yml` | builds both and deploys them to GitHub Pages |
 

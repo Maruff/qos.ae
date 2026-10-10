@@ -84,6 +84,7 @@ jobs:
           set -euo pipefail
           mkdir -p _site/fdroid
           cp index.html _site/
+          cp -r ta _site/
           cp -r assets _site/
           touch _site/.nojekyll
           if [ -d fdroid/repo ] && [ -f fdroid/repo/index-v1.jar ]; then
