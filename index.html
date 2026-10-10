@@ -183,6 +183,9 @@
           <li>qos add-ons for the device: notifications, sensors, camera, widgets and start-on-boot scripts</li>
           <li>Desktop Linux apps through an X11 display</li>
           <li>A full Debian environment for tools Termux does not package</li>
+          <li>An Android kit: build and install apps on the same phone</li>
+          <li>Creative tools on the X11 display: games, 2D animation and video editing</li>
+          <li>An IoT kit: MQTT, dashboards and Wi-Fi updates for ESP32 boards</li>
         </ul>
       </div>
       <div class="stage">
@@ -191,8 +194,37 @@
         <ul>
           <li>An offline code assistant that runs on the device, with no paid AI service</li>
           <li>Ready-made lessons for classrooms</li>
+          <li>Flashing boards over USB without root, and eTamil on Arduino from the phone</li>
           <li>Documentation in Tamil and English</li>
         </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:44px">
+      <p class="eyebrow">Beyond code</p>
+      <h2>Apps, games, cartoons, films and IoT</h2>
+      <p class="intro">Can qos do more than run code? Mostly yes, with honest limits. Here is what works today and what the roadmap adds.</p>
+      <div class="cap">
+        <div class="cap-row"><h3>Mobile apps</h3>
+          <div class="today"><span class="label">Today</span><p>Build Android apps from the terminal: Java 21, Kotlin, Gradle, aapt2, d8, apksigner and adb are all in the package collection. Web apps work fully.</p></div>
+          <div class="coming"><span class="label">Coming</span><p>An Android kit set up in one step, and a starter project that builds and installs on the same phone with one command.</p></div>
+          <div class="limits"><span class="label">Limits</span><p>Builds are slower than on a laptop. Flutter does not run on Android devices yet.</p></div></div>
+        <div class="cap-row"><h3>Games</h3>
+          <div class="today"><span class="label">Today</span><p>Web games in HTML5 and JavaScript, played in the browser, and text games in any language.</p></div>
+          <div class="coming"><span class="label">Coming</span><p>Godot 4, LÖVE, pygame and raylib, running on an X11 display inside qos.</p></div>
+          <div class="limits"><span class="label">Limits</span><p>2D and light 3D. Phones lack the desktop graphics drivers that heavy 3D games need.</p></div></div>
+        <div class="cap-row"><h3>Cartoons and animation</h3>
+          <div class="today"><span class="label">Today</span><p>Animated explainers with manim, and image work with ImageMagick and Python.</p></div>
+          <div class="coming"><span class="label">Coming</span><p>Frame-by-frame 2D animation in Krita, and drawing in Inkscape and GIMP, on the X11 display.</p></div>
+          <div class="limits"><span class="label">Limits</span><p>No Blender, so no 3D animation. Long renders are slow and warm the phone.</p></div></div>
+        <div class="cap-row"><h3>Films</h3>
+          <div class="today"><span class="label">Today</span><p>Edit with ffmpeg: trim, join, add music and Tamil subtitles, and export for YouTube or WhatsApp.</p></div>
+          <div class="coming"><span class="label">Coming</span><p>Timeline editing in Kdenlive or Shotcut, and sound in Audacity, on the X11 display.</p></div>
+          <div class="limits"><span class="label">Limits</span><p>Shoot with the phone&#39;s own camera app; qos edits the footage. Rendering 4K video is slow.</p></div></div>
+        <div class="cap-row"><h3>IoT</h3>
+          <div class="today"><span class="label">Today</span><p>MQTT with Mosquitto, Python and Node.js services, and talking to ESP32 or Arduino boards over Wi-Fi.</p></div>
+          <div class="coming"><span class="label">Coming</span><p>An IoT kit set up in one step: an MQTT broker, dashboards and over-the-air updates for ESP32 boards.</p></div>
+          <div class="limits"><span class="label">Limits</span><p>Flashing boards over USB without root is hard on Android. We are exploring it, together with eTamil on Arduino from the phone.</p></div></div>
       </div>
     </div>
   </div>
