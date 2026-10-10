@@ -72,6 +72,10 @@ jobs:
           for tag in $tags; do
             gh release download "$tag" --repo Maruff/qos --pattern '*.apk' --dir repo --skip-existing
           done
+          # qos Desktop keeps one fixed file name per release, so name each copy after its tag.
+          for tag in $(gh release list --repo Maruff/qos-desktop --limit 2 --exclude-drafts --exclude-pre-releases --json tagName --jq '.[].tagName'); do
+            gh release download "$tag" --repo Maruff/qos-desktop --pattern 'qos-desktop.apk' --output "repo/qos-desktop-$tag.apk" --clobber
+          done
 
           printf '%s' "$FDROID_KEYSTORE_BASE64" | base64 -d > keystore.p12
           printf '\nrepo_url: %s/fdroid/repo\n' "${PAGES_URL%/}" >> config.yml

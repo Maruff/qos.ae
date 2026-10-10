@@ -1,0 +1,22 @@
+Categories:
+  - Development
+  - System
+License: GPL-3.0-only
+AuthorName: Esan Maruff
+WebSite: https://qos.ae
+SourceCode: https://github.com/Maruff/qos-desktop
+IssueTracker: https://github.com/Maruff/qos/issues
+Changelog: https://github.com/Maruff/qos-desktop/releases
+
+Name: qos Desktop
+Summary: The X11 desktop display for qos
+Description: |-
+  qos Desktop shows a Linux desktop (XFCE) for qos, so graphical programs run on
+  your phone or tablet: editors, Krita, Inkscape, GIMP, Kdenlive, Godot and more.
+
+  Install qos first. qos Desktop is signed with the same key and runs as part of
+  qos itself. Then tap Desktop in the qos side drawer: the first time, it sets up
+  XFCE (about 100 MB to download) and opens the desktop.
+
+  qos Desktop is built from Termux:X11. It replaces Termux:X11 and cannot be used
+  with Termux.
