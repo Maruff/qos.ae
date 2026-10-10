@@ -1,0 +1,7 @@
+keystore.p12
+*.p12
+*.jks
+_site/
+fdroid/repo/
+fdroid/archive/
+fdroid/tmp/

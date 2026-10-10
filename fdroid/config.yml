@@ -1,0 +1,17 @@
+# fdroidserver configuration for the qos F-Droid repository.
+# repo_url is filled in by the publish workflow from the GitHub Pages address,
+# so the same file works for maruff.github.io/qos.ae and for qos.ae.
+
+repo_name: qos
+repo_description: >-
+  qos turns an Android phone or tablet into a development machine. This
+  repository carries qos only. https://qos.ae
+repo_icon: qos.png
+
+archive_older: 0
+
+keystore: keystore.p12
+keystorepass: {env: FDROID_KEYSTORE_PASSWORD}
+keypass: {env: FDROID_KEYSTORE_PASSWORD}
+repo_keyalias: qos-fdroid
+keydname: CN=qos F-Droid repo, O=Maruff, C=AE

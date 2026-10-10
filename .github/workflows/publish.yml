@@ -1,0 +1,98 @@
+name: Publish qos.ae
+
+# Builds the website and the qos F-Droid repository, and deploys both to
+# GitHub Pages: the site at /, the F-Droid repository at /fdroid/repo.
+#
+# The F-Droid part runs only when the repository signing key is configured
+# (FDROID_KEYSTORE_BASE64, FDROID_KEYSTORE_PASSWORD) and Maruff/qos has
+# releases; until then the website is published on its own.
+#
+# A qos release does not notify this repository, so the schedule picks new
+# releases up within six hours; run the workflow by hand to publish sooner.
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v6
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build the F-Droid repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FDROID_KEYSTORE_BASE64: ${{ secrets.FDROID_KEYSTORE_BASE64 }}
+          FDROID_KEYSTORE_PASSWORD: ${{ secrets.FDROID_KEYSTORE_PASSWORD }}
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          set -euo pipefail
+          if [ -z "$FDROID_KEYSTORE_BASE64" ]; then
+            echo "::notice::No F-Droid signing key configured; publishing the website only."
+            exit 0
+          fi
+          tags=$(gh release list --repo Maruff/qos --limit 2 --exclude-drafts --exclude-pre-releases --json tagName --jq '.[].tagName')
+          if [ -z "$tags" ]; then
+            echo "::notice::Maruff/qos has no releases yet; publishing the website only."
+            exit 0
+          fi
+
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fdroidserver
+
+          cd fdroid
+          mkdir -p repo/icons
+          cp ../assets/qos-icon-512.png repo/icons/qos.png
+          for tag in $tags; do
+            gh release download "$tag" --repo Maruff/qos --pattern '*.apk' --dir repo --skip-existing
+          done
+
+          printf '%s' "$FDROID_KEYSTORE_BASE64" | base64 -d > keystore.p12
+          printf '\nrepo_url: %s/fdroid/repo\n' "${PAGES_URL%/}" >> config.yml
+          chmod 600 config.yml keystore.p12
+          fdroid update --verbose
+          rm -f keystore.p12
+
+      - name: Assemble the site
+        run: |
+          set -euo pipefail
+          mkdir -p _site/fdroid
+          cp index.html _site/
+          cp -r assets _site/
+          touch _site/.nojekyll
+          if [ -d fdroid/repo ] && [ -f fdroid/repo/index-v1.jar ]; then
+            cp -r fdroid/repo _site/fdroid/repo
+          fi
+          du -sh _site
+
+      - name: Upload the site
+        uses: actions/upload-pages-artifact@v4
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

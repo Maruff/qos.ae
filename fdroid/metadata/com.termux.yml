@@ -1,0 +1,26 @@
+Categories:
+  - Development
+  - System
+License: GPL-3.0-only
+AuthorName: Esan Maruff
+WebSite: https://qos.ae
+SourceCode: https://github.com/Maruff/qos
+IssueTracker: https://github.com/Maruff/qos/issues
+Changelog: https://github.com/Maruff/qos/releases
+
+Name: qos
+Summary: Turn an Android phone or tablet into a development machine
+Description: |-
+  qos is a development machine in one app: a Linux terminal, VS Code, compilers
+  and the eTamil toolchain.
+
+  * A full Termux environment, with thousands of packages through pkg.
+  * VS Code (code-server) running on the device, opened from the side drawer.
+  * git, clang, make, Python, Rust, Java 17 and Node.js, installed on first launch.
+  * The eTamil compiler and its standard library.
+
+  qos uses Termux's package name, com.termux, so every Termux package works.
+  It therefore replaces Termux and cannot be installed alongside it, and
+  Termux add-ons will not work with it.
+
+  q is how eTamil writes the Tamil letter த: qos is தமிழ் OS.
