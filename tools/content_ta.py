@@ -433,6 +433,14 @@ COMMUNITY = """
   </div>
 </section>
 
+<section id="security">
+  <div class="wrap">
+    <div class="band"><div><p class="eyebrow">பாதுகாப்பு</p><h2>பாதுகாப்புச் சிக்கலைத் தனிப்பட்ட முறையில் தெரிவியுங்கள்</h2>
+      <p>VS Code உள்நுழைவில் அல்லது வெளியீடுகள் கையொப்பமிடப்படும் முறையில் உள்ள குறை போன்று, qos தவறாகப் பயன்படுத்தப்படக்கூடிய வழியைக் கண்டீர்களா? அதை மன்றத்திலோ issue-ஆகவோ பதிவிடாதீர்கள். GitHub-இல் தனிப்பட்ட முறையில் தெரிவியுங்கள்: திருத்தம் வெளியாகும் வரை பராமரிப்பாளர் மட்டுமே அதைப் பார்ப்பார்.</p></div>
+      <a class="btn ghost" href="https://github.com/Maruff/qos/security/advisories/new">தனிப்பட்ட முறையில் தெரிவிக்க</a></div>
+  </div>
+</section>
+
 <section class="alt">
   <div class="wrap">
     <p class="eyebrow">உதவும் வழிகள்</p><h2>நிரல் எழுதத் தேவையில்லை</h2>
@@ -484,7 +492,7 @@ TA = {
     "footer": [
         ("qos பெறுக", [("பதிவிறக்கம்", "@L@download/"), ("F-Droid களஞ்சியம்", "@L@download/#verify"), ("GitHub வெளியீடுகள்", "https://github.com/Maruff/qos/releases"), ("தேவைகள்", "@L@download/#requirements")]),
         ("கற்க", [("வசதிகள்", "@L@features/"), ("ஆவணங்கள்", "@L@docs/"), ("திட்டப் பாதை", "@L@roadmap/"), ("கேள்விகள்", "@L@docs/#faq")]),
-        ("சமூகம்", [("மன்றம்", "https://github.com/Maruff/qos/discussions"), ("சிக்கலைத் தெரிவிக்க", "https://github.com/Maruff/qos/issues"), ("பங்களிக்க", "@L@community/"), ("இ-தமிழ்", "https://etamil.in/ta/")]),
+        ("சமூகம்", [("மன்றம்", "https://github.com/Maruff/qos/discussions"), ("சிக்கலைத் தெரிவிக்க", "https://github.com/Maruff/qos/issues"), ("பங்களிக்க", "@L@community/"), ("பாதுகாப்பு", "@L@community/#security"), ("இ-தமிழ்", "https://etamil.in/ta/")]),
         ("திட்டம்", [("பற்றி", "@L@about/"), ("qos மூல நிரல்", "https://github.com/Maruff/qos"), ("qos Desktop மூல நிரல்", "https://github.com/Maruff/qos-desktop"), ("அடையாளம்", "@L@about/#brand")]),
     ],
     "pages": {

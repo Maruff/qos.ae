@@ -433,6 +433,14 @@ COMMUNITY = """
   </div>
 </section>
 
+<section id="security">
+  <div class="wrap">
+    <div class="band"><div><p class="eyebrow">Security</p><h2>Report a security problem privately</h2>
+      <p>Found a way qos could be misused, such as a flaw in VS Code's sign-in or in how releases are signed? Please do not post it in the forum or an issue. Report it privately on GitHub: only the maintainer sees it until a fix is out.</p></div>
+      <a class="btn ghost" href="https://github.com/Maruff/qos/security/advisories/new">Report privately</a></div>
+  </div>
+</section>
+
 <section class="alt">
   <div class="wrap">
     <p class="eyebrow">Ways to help</p><h2>No code needed</h2>
@@ -484,7 +492,7 @@ EN = {
     "footer": [
         ("Get qos", [("Download", "@L@download/"), ("F-Droid repository", "@L@download/#verify"), ("GitHub releases", "https://github.com/Maruff/qos/releases"), ("Requirements", "@L@download/#requirements")]),
         ("Learn", [("Features", "@L@features/"), ("Docs", "@L@docs/"), ("Roadmap", "@L@roadmap/"), ("Questions", "@L@docs/#faq")]),
-        ("Community", [("Forum", "https://github.com/Maruff/qos/discussions"), ("Report a problem", "https://github.com/Maruff/qos/issues"), ("Contribute", "@L@community/"), ("eTamil", "https://etamil.in")]),
+        ("Community", [("Forum", "https://github.com/Maruff/qos/discussions"), ("Report a problem", "https://github.com/Maruff/qos/issues"), ("Contribute", "@L@community/"), ("Security", "@L@community/#security"), ("eTamil", "https://etamil.in")]),
         ("Project", [("About", "@L@about/"), ("qos source", "https://github.com/Maruff/qos"), ("qos Desktop source", "https://github.com/Maruff/qos-desktop"), ("Brand", "@L@about/#brand")]),
     ],
     "pages": {
