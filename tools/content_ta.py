@@ -196,7 +196,7 @@ HOME = f"""
     <div class="steps">
       <div class="card step"><h3>qos களஞ்சியத்தைச் சேருங்கள்</h3><p>F-Droid-இல் qos களஞ்சியத்தைச் சேர்த்து அதன் கைரேகையைச் சரிபாருங்கள். அல்லது GitHub-இலிருந்து APK-ஐப் பதிவிறக்குங்கள்.</p></div>
       <div class="card step"><h3>qos-ஐ நிறுவித் திறங்கள்</h3><p>முதல் முறை திறக்கும்போது qos தன் கருவிகளை அமைக்கிறது. Wi-Fi பயன்படுத்துங்கள்: சுமார் 500 MB பதிவிறக்கும்.</p></div>
-      <div class="card step"><h3>கட்டத் தொடங்குங்கள்</h3><p>முனையத்தில் தட்டச்சு செய்யுங்கள், அல்லது VS Code, Desktop-க்கு இடப்புறமிருந்து உள்ளே இழுங்கள்.</p></div>
+      <div class="card step"><h3>கட்டத் தொடங்குங்கள்</h3><p>முனையத்தில் தட்டச்சு செய்யுங்கள், அல்லது VS Code, Desktop-க்கு ☰ விசையைத் தொடுங்கள். qos சின்னத்தை நீண்ட நேரம் அழுத்தினாலும் இரண்டும் கிடைக்கும்.</p></div>
     </div>
     <p style="margin-top:24px"><a class="btn primary" href="@L@download/">பதிவிறக்கப் பக்கத்துக்குச் செல்லுங்கள்</a></p>
   </div>
@@ -294,7 +294,7 @@ DOWNLOAD = f"""
     <div class="feature">
       <div class="media">{fig("tablet-desktop", "qos Desktop-இல் XFCE மேசைத்தளம்", True)}</div>
       <div><p class="eyebrow">இணைப்பு</p><h2>qos Desktop</h2>
-        <p>சாளரங்களும் சுட்டியும் வேண்டுமா? qos-க்குப் பின் qos Desktop-ஐ நிறுவுங்கள்: அதே F-Droid களஞ்சியத்திலிருந்து, அல்லது GitHub-இலிருந்து <a href="https://github.com/Maruff/qos-desktop/releases/latest">qos-desktop.apk</a>. பின் qos பக்கப் பட்டியில் Desktop-ஐத் தொடுங்கள்.</p>
+        <p>சாளரங்களும் சுட்டியும் வேண்டுமா? qos-க்குப் பின் qos Desktop-ஐ நிறுவுங்கள்: அதே F-Droid களஞ்சியத்திலிருந்து, அல்லது GitHub-இலிருந்து <a href="https://github.com/Maruff/qos-desktop/releases/latest">qos-desktop.apk</a>. பின் qos Desktop-ஐத் திறந்து Start the desktop-ஐத் தொடுங்கள்.</p>
         <p class="note">qos Desktop, இதே மூலங்களிலிருந்து வரும் qos உடன் மட்டுமே இயங்கும்; இரண்டும் qos சாவியால் கையொப்பமிடப்பட்டிருக்க வேண்டும்.</p></div>
     </div>
   </div>
@@ -339,14 +339,14 @@ DOCS = """
       <section id="terminal"><h2>முனையம்</h2>
         <p>தொகுப்புத் திரட்டிலிருந்து எதையும் <code>pkg</code> கொண்டு நிறுவலாம்:</p><pre>pkg search postgres
 pkg install postgresql</pre>
-        <p>இடது ஓரத்திலிருந்து உள்ளே இழுத்தால் பக்கப் பட்டி: அமர்வுகள், விசைப்பலகை மாற்றி, VS Code, Desktop. கூடுதல் விசை வரிசையைக் காட்ட அல்லது மறைக்க விசைப்பலகைப் பொத்தானை நீண்ட நேரம் அழுத்துங்கள்.</p></section>
+        <p>கூடுதல் விசை வரிசையில் <strong>☰</strong>-ஐத் தொட்டால் பக்கப் பட்டி: அமர்வுகள், விசைப்பலகை மாற்றி, VS Code, Desktop. இடது ஓரத்திலிருந்து உள்ளே இழுத்தாலும் திறக்கும் — சைகை வழிசெலுத்தல் உள்ள கைபேசிகளைத் தவிர; அவற்றில் அந்த இழுப்பு பின்செல்லும். <strong>Desktop</strong>, <strong>VS Code</strong> குறுக்குவழிகளுக்கு முகப்புத் திரையில் qos சின்னத்தை நீண்ட நேரம் அழுத்துங்கள்.</p></section>
       <section id="storage"><h2>உங்கள் கோப்புகள்</h2>
         <p>உங்கள் திட்டங்கள் qos-இன் வீட்டுக் கோப்புறையில் இருக்கும். கைபேசியின் பகிர்ந்த சேமிப்பை (Downloads, Pictures, கேமரா காட்சிகள்) அணுக, ஒருமுறை இயக்குங்கள்:</p><pre>termux-setup-storage</pre><p>அது அனுமதி கேட்டு, அந்தக் கோப்புறைகளுக்கான இணைப்புகளுடன் <code>~/storage</code>-ஐ உருவாக்கும்.</p></section>
       <section id="vscode"><h2>VS Code</h2>
-        <p>பக்கப் பட்டியில் <strong>VS Code</strong>-ஐத் தொடுங்கள். code-server இயங்கவில்லை என்றால் qos அதைப் பின்னணியில் தொடங்கி, <code>~/.config/code-server/config.yaml</code>-இல் உள்ள கடவுச்சொல்லைக் கொண்டு உங்களை உள்நுழைக்கும்.</p>
+        <p>பக்கப் பட்டியில் (☰ விசை) <strong>VS Code</strong>-ஐத் தொடுங்கள், அல்லது qos சின்னத்தை நீண்ட நேரம் அழுத்தி VS Code-ஐத் தேர்ந்தெடுங்கள். code-server இயங்கவில்லை என்றால் qos அதைப் பின்னணியில் தொடங்கி, <code>~/.config/code-server/config.yaml</code>-இல் உள்ள கடவுச்சொல்லைக் கொண்டு உங்களை உள்நுழைக்கும்.</p>
         <p>கடவுச்சொல் வேண்டுமென்றே இயக்கத்தில் உள்ளது: கைபேசியில் உள்ள எந்தச் செயலியும் 127.0.0.1:8080-ஐ அணுக முடியும், code-server கட்டளைகளை இயக்க முடியும். நீங்களே தொடங்க: <code>code-server</code>.</p></section>
       <section id="desktop"><h2>qos Desktop</h2>
-        <p>qos F-Droid களஞ்சியத்திலிருந்து qos Desktop-ஐ நிறுவி, பக்கப் பட்டியில் <strong>Desktop</strong>-ஐத் தொடுங்கள். முதல் முறை qos, XFCE-ஐயும் (சுமார் 100 MB) <code>qos-x11</code> தொகுப்பையும் நிறுவி, மேசைத்தளத்தைத் திறக்கும். முனையத்திலிருந்து: <code>qos-desktop</code>.</p>
+        <p>qos F-Droid களஞ்சியத்திலிருந்து qos Desktop-ஐ நிறுவி, அதைத் திறந்து <strong>Start the desktop</strong>-ஐத் தொடுங்கள்; அல்லது qos பக்கப் பட்டியில் (☰ விசை) <strong>Desktop</strong>-ஐத் தொடுங்கள். முதல் முறை qos, XFCE-ஐயும் (சுமார் 100 MB) <code>qos-x11</code> தொகுப்பையும் நிறுவி, மேசைத்தளத்தைத் திறக்கும். முனையத்திலிருந்து: <code>qos-desktop</code>.</p>
         <p>நிறுத்த: XFCE-இலிருந்து வெளியேறுங்கள், அல்லது qos Desktop அறிவிப்பில் Exit, அல்லது தொடங்கிய அமர்வில் Ctrl+C. முனையத்திலிருந்து தொடங்கும் வரைகலை நிரல்களுக்கு <code>DISPLAY=:1</code> தேவை.</p>
         <p>திரை கருப்பாகவே இருந்தால் அல்லது நிறங்கள் மாறித் தெரிந்தால், ஒரு விருப்பத்துடன் கைமுறையாகத் தொடங்குங்கள்:</p><pre>termux-x11 :1 -legacy-drawing -xstartup "xfce4-session"
 termux-x11 :1 -force-bgra -xstartup "xfce4-session"</pre></section>
@@ -404,7 +404,12 @@ ROADMAP = f"""
   <div class="wrap">
     <p class="eyebrow">வெளியீட்டுக் குறிப்புகள்</p><h2>என்ன மாறியது</h2>
     <div class="grid two">
-      <div class="card"><span class="tag">11 அக்டோபர் 2026</span><h3>qos 0.2, qos Desktop 0.1</h3><ul>
+      <div class="card"><span class="tag">11 அக்டோபர் 2026</span><h3>qos 0.2.1 முதல் 0.2.4, qos Desktop 0.1.1, 0.1.2</h3><ul>
+        <li>மேசைத்தளம் தொடங்குகிறது: qos, Desktop-ஐ <code>pm</code> கொண்டு தேடியது; பல கைபேசிகள் செயலிக்குள்ளிருந்து அதை மறுக்கின்றன, அதனால் நின்றது. இப்போது qos Desktop-இன் தரவுக் கோப்புறையைத் தேடுகிறது.</li>
+        <li>இனி இழுக்கத் தேவையில்லை: ☰ விசை பக்கப் பட்டியைத் திறக்கிறது; qos சின்னத்தை நீண்ட நேரம் அழுத்தினால் Desktop, VS Code கிடைக்கும்; qos Desktop-இன் Not connected திரையில் Start the desktop பொத்தான் உள்ளது.</li>
+        <li>கட்டளை வரி அடையாளம் சுருக்கமான <code>q&gt;</code>; qos புதுப்பிக்கப்பட்டதுமே அதன் நிரல்களும் புதுப்பிக்கப்படுகின்றன.</li>
+        <li>இ-தமிழ் 2.0-க்கு ஆயத்தமாக, qos முதலில் இ-தமிழின் ஆண்ட்ராய்டு பதிப்பைத் தேடுகிறது.</li></ul></div>
+      <div class="card"><span class="tag grey">11 அக்டோபர் 2026</span><h3>qos 0.2, qos Desktop 0.1</h3><ul>
         <li>பக்கப் பட்டியில் உள்ள Desktop பொத்தான் qos Desktop-இல் XFCE மேசைத்தளத்தைத் திறக்கிறது; முதல் முறை அதை அமைக்கிறது.</li>
         <li>qos Desktop: qos சாவியால் கையொப்பமிடப்பட்ட Termux:X11 திரை; அதனால் qos-இன் ஒரு பகுதியாக இயங்குகிறது.</li>
         <li>இரண்டும் qos F-Droid களஞ்சியத்தில் உள்ளன.</li></ul>

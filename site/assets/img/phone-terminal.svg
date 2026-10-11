@@ -13,20 +13,20 @@
   <text x="326" y="44" class="m d" style="font-size:11px;text-anchor:end">5G ▮▮▮ 82%</text>
 
   <g transform="translate(30 86)">
-    <text class="m" y="0"><tspan class="p">~ $</tspan> pkg install git python</text>
+    <text class="m" y="0"><tspan class="p">q&gt;</tspan> pkg install git python</text>
     <text class="m d" y="20">Reading package lists... Done</text>
     <text class="m d" y="38">Setting up python (3.14.6) ...</text>
     <text class="m d" y="56">Setting up git (2.52.0) ...</text>
-    <text class="m" y="84"><tspan class="p">~ $</tspan> git clone github.com/you/site</text>
+    <text class="m" y="84"><tspan class="p">q&gt;</tspan> git clone github.com/you/site</text>
     <text class="m d" y="104">Cloning into 'site'... done.</text>
-    <text class="m" y="132"><tspan class="p">~ $</tspan> cd site &amp;&amp; git log --oneline</text>
+    <text class="m" y="132"><tspan class="p">q&gt;</tspan> cd site &amp;&amp; git log --oneline</text>
     <text class="m" y="152"><tspan class="y">3f9c2e1</tspan> Add contact page</text>
     <text class="m" y="170"><tspan class="y">a17b04d</tspan> Tamil translation</text>
     <text class="m" y="188"><tspan class="y">5be88c0</tspan> First version</text>
-    <text class="m" y="216"><tspan class="p">~/site $</tspan> python -m http.server</text>
+    <text class="m" y="216"><tspan class="p">q site&gt;</tspan> python -m http.server</text>
     <text class="m g" y="236">Serving HTTP on 0.0.0.0 port 8000</text>
     <text class="m b" y="254">127.0.0.1 - "GET / HTTP/1.1" 200</text>
-    <text class="m" y="282"><tspan class="p">~/site $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+    <text class="m" y="282"><tspan class="p">q site&gt;</tspan> <tspan fill="#10f3be">▌</tspan></text>
   </g>
 
   <g transform="translate(18 610)">

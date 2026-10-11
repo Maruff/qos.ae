@@ -29,9 +29,9 @@
 
   <rect x="18" y="400" width="324" height="1" fill="#1d2825"/>
   <g transform="translate(30 436)">
-    <text class="m"><tspan class="p">~ $</tspan> etamil --vm ceyalkaL.qmz</text>
+    <text class="m"><tspan class="p">q&gt;</tspan> etamil --vm ceyalkaL.qmz</text>
     <text class="t" y="30" fill="#8be9a8">காரணீயம்(6) = 720</text>
-    <text class="m" y="66"><tspan class="p">~ $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+    <text class="m" y="66"><tspan class="p">q&gt;</tspan> <tspan fill="#10f3be">▌</tspan></text>
   </g>
   <rect x="130" y="690" width="100" height="5" rx="2.5" fill="#2a3a36"/>
 </svg>

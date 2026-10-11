@@ -55,10 +55,10 @@
   <rect x="258" y="430" width="678" height="1" fill="#1d2825"/>
   <text x="274" y="452" class="s" style="font-weight:600;fill:#e9f1ef">TERMINAL</text>
   <g class="m" transform="translate(274 482)">
-    <text y="0"><tspan class="p">~/app $</tspan> python server.py</text>
+    <text y="0"><tspan class="p">q app&gt;</tspan> python server.py</text>
     <text y="22" fill="#8be9a8">Open http://localhost:8000</text>
     <text y="44" fill="#8fb8ff">127.0.0.1 - "GET / HTTP/1.1" 200 -</text>
-    <text y="66"><tspan class="p">~/app $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+    <text y="66"><tspan class="p">q app&gt;</tspan> <tspan fill="#10f3be">▌</tspan></text>
   </g>
   <!-- status bar -->
   <rect x="24" y="594" width="912" height="22" fill="#10f3be"/>

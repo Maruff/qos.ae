@@ -196,7 +196,7 @@ HOME = f"""
     <div class="steps">
       <div class="card step"><h3>Add the qos repository</h3><p>In F-Droid, add the qos repository and check its fingerprint. Or download the APK from GitHub.</p></div>
       <div class="card step"><h3>Install and open qos</h3><p>On first launch qos sets up its tools. Use Wi-Fi: it downloads about 500 MB.</p></div>
-      <div class="card step"><h3>Start building</h3><p>Type in the terminal, or swipe in from the left for VS Code and Desktop.</p></div>
+      <div class="card step"><h3>Start building</h3><p>Type in the terminal, or tap the ☰ key for VS Code and Desktop. Long-pressing the qos icon offers both too.</p></div>
     </div>
     <p style="margin-top:24px"><a class="btn primary" href="@L@download/">Go to Download</a></p>
   </div>
@@ -294,7 +294,7 @@ DOWNLOAD = f"""
     <div class="feature">
       <div class="media">{fig("tablet-desktop", "The XFCE desktop in qos Desktop", True)}</div>
       <div><p class="eyebrow">Add-on</p><h2>qos Desktop</h2>
-        <p>Want windows and a mouse pointer? Install qos Desktop after qos: from the same F-Droid repository, or <a href="https://github.com/Maruff/qos-desktop/releases/latest">qos-desktop.apk</a> from GitHub. Then tap Desktop in the qos side drawer.</p>
+        <p>Want windows and a mouse pointer? Install qos Desktop after qos: from the same F-Droid repository, or <a href="https://github.com/Maruff/qos-desktop/releases/latest">qos-desktop.apk</a> from GitHub. Then open qos Desktop and tap Start the desktop.</p>
         <p class="note">qos Desktop only works with qos from these same sources, because both must be signed with the qos key.</p></div>
     </div>
   </div>
@@ -339,14 +339,14 @@ DOCS = """
       <section id="terminal"><h2>The terminal</h2>
         <p>Install anything from the package collection with <code>pkg</code>:</p><pre>pkg search postgres
 pkg install postgresql</pre>
-        <p>Swipe in from the left edge for the drawer: sessions, the keyboard toggle, VS Code and Desktop. Long-press the keyboard button to show or hide the extra keys row.</p></section>
+        <p>Tap <strong>☰</strong> on the extra keys row for the drawer: sessions, the keyboard toggle, VS Code and Desktop. A swipe in from the left edge opens it too, except on phones with gesture navigation, where that swipe means Back. Long-press the qos icon on the home screen for <strong>Desktop</strong> and <strong>VS Code</strong> shortcuts.</p></section>
       <section id="storage"><h2>Your files</h2>
         <p>Your projects live in qos's home folder. To reach the phone's shared storage (Downloads, Pictures, camera footage), run once:</p><pre>termux-setup-storage</pre><p>It asks for permission and creates <code>~/storage</code> with links to those folders.</p></section>
       <section id="vscode"><h2>VS Code</h2>
-        <p>Tap <strong>VS Code</strong> in the drawer. qos starts code-server in the background if it is not already running, and signs you in with the password from <code>~/.config/code-server/config.yaml</code>.</p>
+        <p>Tap <strong>VS Code</strong> in the drawer (the ☰ key), or long-press the qos icon and choose VS Code. qos starts code-server in the background if it is not already running, and signs you in with the password from <code>~/.config/code-server/config.yaml</code>.</p>
         <p>The password stays on deliberately: every app on the phone can reach 127.0.0.1:8080, and code-server can run commands. To start it yourself: <code>code-server</code>.</p></section>
       <section id="desktop"><h2>qos Desktop</h2>
-        <p>Install qos Desktop from the qos F-Droid repository, then tap <strong>Desktop</strong> in the drawer. The first time, qos installs XFCE (about 100 MB) and the <code>qos-x11</code> package, then opens the desktop. From a terminal: <code>qos-desktop</code>.</p>
+        <p>Install qos Desktop from the qos F-Droid repository, then open qos Desktop and tap <strong>Start the desktop</strong>, or tap <strong>Desktop</strong> in qos's drawer (the ☰ key). The first time, qos installs XFCE (about 100 MB) and the <code>qos-x11</code> package, then opens the desktop. From a terminal: <code>qos-desktop</code>.</p>
         <p>Stop it by logging out of XFCE, with Exit in the qos Desktop notification, or with Ctrl+C in the session that started it. Graphical programs started from a terminal need <code>DISPLAY=:1</code>.</p>
         <p>If the screen stays black or colours look swapped, start it by hand with an option:</p><pre>termux-x11 :1 -legacy-drawing -xstartup "xfce4-session"
 termux-x11 :1 -force-bgra -xstartup "xfce4-session"</pre></section>
@@ -404,7 +404,12 @@ ROADMAP = f"""
   <div class="wrap">
     <p class="eyebrow">Release notes</p><h2>What changed</h2>
     <div class="grid two">
-      <div class="card"><span class="tag">11 October 2026</span><h3>qos 0.2 and qos Desktop 0.1</h3><ul>
+      <div class="card"><span class="tag">11 October 2026</span><h3>qos 0.2.1 to 0.2.4, qos Desktop 0.1.1 and 0.1.2</h3><ul>
+        <li>The desktop starts: qos found qos Desktop through <code>pm</code>, which many phones refuse inside an app, and stopped. It now looks for qos Desktop's data folder.</li>
+        <li>No more swiping: a ☰ key opens the drawer, long-pressing the qos icon offers Desktop and VS Code, and qos Desktop's Not connected screen has a Start the desktop button.</li>
+        <li>The prompt is a short <code>q&gt;</code>, and qos's scripts update the moment qos does.</li>
+        <li>qos looks for eTamil's Android build first, ready for eTamil 2.0.</li></ul></div>
+      <div class="card"><span class="tag grey">11 October 2026</span><h3>qos 0.2 and qos Desktop 0.1</h3><ul>
         <li>A Desktop button in the drawer opens an XFCE desktop on qos Desktop, setting it up the first time.</li>
         <li>qos Desktop: the Termux:X11 display, signed with the qos key so it runs as part of qos.</li>
         <li>Both are in the qos F-Droid repository.</li></ul>

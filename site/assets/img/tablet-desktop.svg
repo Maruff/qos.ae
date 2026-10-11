@@ -49,13 +49,13 @@
     <text x="16" y="20" class="s">Terminal</text>
     <circle cx="398" cy="15" r="6" fill="#3a4a46"/><circle cx="378" cy="15" r="6" fill="#3a4a46"/>
     <g class="m" transform="translate(16 60)">
-      <text><tspan class="p">~ $</tspan> pkg install krita inkscape</text>
+      <text><tspan class="p">q&gt;</tspan> pkg install krita inkscape</text>
       <text y="22" class="d">Setting up krita (6.0.4.1) ...</text>
       <text y="44" class="d">Setting up inkscape (1.4.4) ...</text>
-      <text y="72"><tspan class="p">~ $</tspan> krita &amp;</text>
-      <text y="100"><tspan class="p">~ $</tspan> echo $DISPLAY</text>
+      <text y="72"><tspan class="p">q&gt;</tspan> krita &amp;</text>
+      <text y="100"><tspan class="p">q&gt;</tspan> echo $DISPLAY</text>
       <text y="122">:1</text>
-      <text y="150"><tspan class="p">~ $</tspan> <tspan fill="#10f3be">▌</tspan></text>
+      <text y="150"><tspan class="p">q&gt;</tspan> <tspan fill="#10f3be">▌</tspan></text>
     </g>
   </g>
   <!-- bottom dock -->
